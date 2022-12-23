@@ -77,7 +77,9 @@ export class CognitoStack extends cdk.Stack {
       writeAttributes: clientWriteAttributes,
       generateSecret: true,
       oAuth: {
-        callbackUrls: [`${api.url}*`],
+        callbackUrls: [
+          `${api.url}*`
+        ],
         flows: {
           authorizationCodeGrant: true
         },
